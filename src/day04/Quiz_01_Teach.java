@@ -114,18 +114,18 @@ public class Quiz_01_Teach {
 		
 		
 		//8번
-		int usb,count;
-		usb = 5000;
-		System.out.print("커피 몇개 구매하세요? : ");
-		count = sc.nextInt();
-		
-		if(count > 10 && count <= 99) {
-			usb = (int) (count * 5000 - (count * (5000*0.1)) + 50000);
-		}else if(count > 100) {
-			usb = (int) (count * 5000 - (count * (5000*0.12)) + 50000);
-		}
-		System.out.println("주문하신 개수는 : " + count + "개이며, 총 " + usb + "원 입니다.");
-		
+//		int pri,count,usb;
+//		usb = 5000;
+//		System.out.print("커피 몇개 구매하세요? : ");
+//		count = sc.nextInt();
+//		pri = usb * count;
+//		
+//		if(count > 10 && count <= 99) {
+//			pri = (int)(pri * 0.9);
+//		}else if(count > 100) {
+//			pri = (int)(pri * 0.88);
+//		}
+//		System.out.println("주문하신 개수는 : " + count + "개이며, 총 " + pri + "원 입니다.");
 		
 		
 		
@@ -169,12 +169,44 @@ public class Quiz_01_Teach {
 		
 		
 		
+		//10번
+//		int num;
+//		System.out.println("수를 입력하세요 : ");
+//		num = sc.nextInt();
+//		if(num == 0) {
+//			System.out.println("잘못 입력하셨습니다.");
+//		}else if(num%3 == 0 & num%4 == 0) {
+//			System.out.println(num + "은 3과 4의 배수입니다.");
+//		}else if(num%3 == 0) {
+//			System.out.println(num + "은 3의 배수입니다.");
+//		}else if(num%4 == 0) {
+//			System.out.println(num + "은 4의 배수입니다.");
+//		}else {
+//			System.out.println(num + "은 3의 배수도 4의 배수도 아닙니다.");
+//		}
 		
 		
+		//11번 문제
 		
+		int time, money = 30000;
+		System.out.print("비행기 탑승 시간(분) : ");
 		
-	}
+		time = sc.nextInt();
+		time -= 30;
+		
+		if(time > 0) {
+			if(time % 10 == 0) {
+				money = money + (time/10 * 5000);
+			}else {
+				money = money + (time/10 * 5000) + 5000;  
+			}
+		}System.out.println("기존 30분에서 추가된 시간은 " + time + "분 입니다. 요금은 " + money + "원 입니다.");
+
+
+
+	}			
 }
+
 
 
 
